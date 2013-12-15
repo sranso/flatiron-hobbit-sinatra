@@ -5,7 +5,7 @@ class Mealtime < ActiveRecord::Base
     @time = Time.now.hour
   end
 
-  def which_meal
+  def meal
     case @time
     when 5..7
       "Breakfast"
@@ -25,5 +25,9 @@ class Mealtime < ActiveRecord::Base
       "Go back to sleep, Hobbit!"
     end
   end
-  
+
+  def img
+    meal.downcase.gsub(" ", "-").gsub(",", "") + ".jpg"
+  end
+
 end

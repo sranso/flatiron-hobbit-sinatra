@@ -26,6 +26,7 @@ module Name
     end
 
     get '/eat' do
+      @meal = Mealtime.new
       erb :eat
     end
 
