@@ -8,17 +8,6 @@ end
 module Name
   class App < Sinatra::Application
 
-    #configure
-    configure do
-      set :root, File.dirname(__FILE__)
-      set :public_folder, 'public'
-    end
-
-    #database
-    set :database, "sqlite3:///database.db"
-
-    #filters
-
     #routes
     get '/' do
       @meal = Mealtime.new
@@ -28,13 +17,6 @@ module Name
     get '/eat' do
       @meal = Mealtime.new
       erb :eat
-    end
-
-    #helpers
-    helpers do
-      def partial(file_name)
-        erb file_name, :layout => false
-      end
     end
 
   end
