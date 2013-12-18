@@ -2,9 +2,12 @@
   http://ashleygwilliams.github.io/ratpack/
 
 2. what are we looking at
+Sinatra is a lightweight Ruby framework (vs Rails, a heavyweight Ruby framework)
+  sinatra 1,500 lines of code vs rails 10,000
+  sinatra is like training wheels for a rails app
 Simple Sinatra Application
-  Gemfile - contains gems
-  Gemfile lock - record of what is installed. means you ran "bundle install". when you run "b.i." restart your server
+  Gemfile - contains gems (which are dependencies your app as)(bundler tells server to install them if they're not already)
+  Gemfile lock - record of what is installed. means you ran "bundle install". when you run "b.i." restart your server. tells you about your gems and their dependencies on other gems. geneology of gems.
   app.rb - routes, program logic. AKA "controller"
   config.ru - rack up file. helps us start our local server.
   lib - ruby files
@@ -34,3 +37,16 @@ Simple Sinatra Application
   6 see it live!
 
 5. and there you have it! any questions?
+
+- tricks for sinatra
+- why use sinatra
+
+SLIDES
+1. sinatra
+2. start w/ nothing, build only parts you need and want
+VS rails where you start with block of stone and chip away until you have what you want
+both serve diff purposes. sinatra will let you customize all the way, rails will give you everything a certain way all at the beginning.
+(rails prepoluates, sinatra gives you less at the beginning)
+3. how the files talk to each other
+4. necessary files (individual and as a whole?)
+5. what you can do with it

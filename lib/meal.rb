@@ -1,4 +1,4 @@
-class Mealtime < ActiveRecord::Base
+class Mealtime
   attr_reader :time
 
   def initialize
