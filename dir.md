@@ -43,10 +43,10 @@ Simple Sinatra Application
 
 SLIDES
 1. sinatra
-2. start w/ nothing, build only parts you need and want
+2. Sinatra is a domain-specific language for quickly creating web applications in Ruby with minimal effort:
+start w/ nothing, build only parts you need and want
 VS rails where you start with block of stone and chip away until you have what you want
 both serve diff purposes. sinatra will let you customize all the way, rails will give you everything a certain way all at the beginning.
-(rails prepoluates, sinatra gives you less at the beginning)
 3. how the files talk to each other
-4. necessary files (individual and as a whole?)
+4. necessary files
 5. what you can do with it
