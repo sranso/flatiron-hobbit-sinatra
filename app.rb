@@ -11,7 +11,6 @@ module Name
     #routes
     get '/' do
       @today = get_time
-
       @meal = Mealtime.new(@today)
       erb :index
     end
@@ -29,8 +28,8 @@ module Name
         end
 
         location = request.location # gives location of request
-        lat = location.latitude # gives lat
-        long = location.longitude # gives long
+        lat = location.latitude
+        long = location.longitude
 
         timezone = Timezone::Zone.new(:latlon => [lat, long])
         timezone.time(Time.now)

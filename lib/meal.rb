@@ -30,6 +30,14 @@ class Mealtime
     end
   end
 
+  def eat
+    if (5..22) === @time
+      "Let's eat #{self.meal}!"
+    else
+      self.meal
+    end
+  end
+
   def img
     meal.downcase.gsub(" ", "-").gsub(",", "") + ".jpg"
   end
