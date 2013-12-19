@@ -1,8 +1,12 @@
 class Mealtime
   attr_reader :time
 
-  def initialize
-    @time = Time.now.hour
+  Timezone::Configure.begin do |c|
+    c.username = 'your_geonames_username_goes_here'
+  end
+
+  def initialize(time)
+    @time = time.hour
   end
 
   def meal

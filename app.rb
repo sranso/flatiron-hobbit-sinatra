@@ -10,7 +10,18 @@ module Name
 
     #routes
     get '/' do
-      @meal = Mealtime.new
+      Timezone::Configure.begin do |c|
+        c.username = 'sranso'
+      end
+
+      location = request.location # gives location of request
+      lat = location.latitude # gives lat
+      long = location.longitude # gives long
+
+      timezone = Timezone::Zone.new(:latlon => [lat, long])
+      @today = timezone.time(Time.now)
+
+      @meal = Mealtime.new(@today)
       erb :index
     end
 

@@ -6,6 +6,7 @@ gem "activerecord"
 gem "sinatra-activerecord"
 gem "rake"
 gem "timezone"
+gem "geocoder"
 
 group :development do
   gem "shotgun"
